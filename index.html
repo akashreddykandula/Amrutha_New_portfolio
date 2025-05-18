@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amrutha's | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/U8Tn4+jLd1gT/5f3cP2lbz0EBZWXHguVzwjEyNHZCZNhbDHcfvWY0U+lLWhEK13mF0x2FX5Z9c/FBY50J7iKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-7L3rO6R6n93sZl5uXVQGcpeps9K2i3rYPZmcED1UZcWzIBKX64U+xvpxNsGqcoMA9N3ql3XZjWmnw0pG+E+n/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- AOS Animate On Scroll Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar starts -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <span class="logo">Amrutha Kandula</span>
+        <nav class="nav-links md:flex hidden">
+                <a  class="nav-link" href="#hero">Home</a>
+          <a  class="nav-link" href="#about">About</a>
+           <a href="#education" class="nav-link">Education</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+           <a href="#experience" class="nav-link">Experience</a>
+                <a href="#hooding-ceremony" class="nav-link">Hooding</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+  <!-- Toggle / Close Button -->
+<button id="menu-toggle" class="menu-btn md:hidden z-50 relative">
+  <!-- Hamburger Icon -->
+  <svg id="hamburger-icon" class="w-6 h-6 text-[var(--primary)] block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  <!-- Close Icon -->
+  <svg id="close-icon" class="w-6 h-6 text-[var(--primary)] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M6 18L18 6M6 6l12 12"></path>
+  </svg>
+</button>
+<!-- Mobile Menu (absolute for animation) -->
+<div id="mobile-menu"
+  class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-[var(--background)] border-t border-[var(--secondary)] text-center py-6 space-y-4 shadow-lg z-40 transition-all duration-300">
+  <a class="nav-link block" href="#hero">Home</a>
+  <a href="#about" class="nav-link block">About</a>
+  <a href="#education" class="nav-link block">Education</a>
+  <a href="#projects" class="nav-link block">Projects</a>
+  <a href="#skills" class="nav-link block">Skills</a>
+  <a href="#experience" class="nav-link block">Experience</a>
+       <a href="#hooding-ceremony" class="nav-link">Hooding</a>
+  <a href="#contact" class="nav-link block">Contact</a>
+</div>
+<!-- Optional overlay -->
+<div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30 md:hidden"></div>
+
+  </header>
+  <!-- navbar ends -->
+
+  <!-- hero section starts -->
+   <section id="hero" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center text-center md:text-left px-6 pt-24 gap-10 fade-in" >
+  <div class="md:w-1/2 space-y-6">
+    <h1 class="text-4xl md:text-6xl font-bold">
+      Hi, I'm <span class="text-[var(--primary)]">Amrutha Kandula</span>
+    </h1>
+    <h2 class="text-xl md:text-2xl text-[var(--text-muted)] h-[32px]">
+      <span id="typewriter" class="whitespace-nowrap"></span>
+    </h2>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+  <!-- View My Work Button -->
+  <a href="#projects" class="inline-block bg-[var(--primary)] hover:bg-[var(--background)] hover:text-[var(--primary)] hover:border border-[var(--primary)] px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md">
+    View My Work
+  </a>
+
+  <!-- Download Resume Button -->
+  <a href="amrutha_resume.pdf" download class="inline-block border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white px-6 py-3 rounded-full font-semibold transition duration-300 shadow-md">
+    Get Resume
+  </a>
+</div>
+
+<div class="flex justify-center md:justify-start gap-6 text-[var(--text-muted)] text-2xl mt-4">
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/amruthakandula/" target="_blank" aria-label="LinkedIn" title="LinkedIn" class="hover:text-[var(--primary-light)] transform hover:scale-110 hover:-translate-y-1 transition duration-300">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.6h.1c.6-1.1 2.1-2.6 4.4-2.6 4.7 0 5.6 3.1 5.6 7.1V24h-5V15.3c0-2.1-.04-4.8-2.9-4.8-2.9 0-3.3 2.3-3.3 4.6V24h-5V8z"/></svg>
+  </a>
+  <!-- mail -->
+   <a href="mailto:amruthakandula2001@gmail.com" target="_blank" aria-label="Email" title="Email" class="hover:text-[var(--primary-light)] transform hover:scale-110 hover:-translate-y-1 transition duration-300">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM4 6h16l-8 5-8-5zm0 12V8l8 5 8-5v10H4z"/>
+  </svg>
+</a>
+<!-- phone -->
+ <a href="tel:+1(978)-427-0626 " target="_blank" aria-label="Phone" title="Call" class="hover:text-[var(--primary-light)] transform hover:scale-110 hover:-translate-y-1 transition duration-300">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.1.34.03.72-.24 1.01l-2.21 2.2z"/>
+  </svg>
+</a>
+</div>
+  </div>
+  
+  <div class="md:w-1/3">
+    <img src="./images/profile.jpg" alt="ammu's profile" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-[var(--primary)] mx-auto zoom-in">
+
+  </div>
+</section>
+  <!-- hero section ends -->
+
+  <!-- About section starts -->
+   <section id="about" class="min-h-[70vh] px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up" data-aos-delay="400">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <!-- Profile Image -->
+    <div class="flex-shrink-0">
+       <img src="about.jpg" alt="ammu's profile" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-[var(--primary)] mx-auto zoom-in">
+    </div>
+
+    <!-- About Text Content -->
+    <div>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">About Me</h2>
+      <p class="text-lg text-[var(--text-muted)] leading-relaxed mb-6">
+        Hi, I'm <span class="font-semibold text-[var(--text)]">Amrutha Kandula </span>,  a passionate Network Engineer and Computer Science graduate student based in Massachusetts.<br /><br />
+        With hands-on experience in designing, configuring, and securing enterprise-level networks, I specialize in building reliable, scalable infrastructures. My professional background includes working at Avineon India Pvt Ltd, where I enhanced multi-site connectivity and implemented robust security measures using tools like Wireshark, Cisco Packet Tracer, and GNS3.
+
+From optimizing network performance to leading automation projects like the MSME Railway Waste Segregation system, I bring both technical skill and problem-solving agility. I’m currently pursuing my Master’s in Computer Science at Rivier University, with a focus on advancing network systems and cybersecurity.
+
+I'm driven by curiosity, innovation, and a commitment to making digital environments more efficient and secure.
+      </p>
+
+      <!-- Tech Stack Badges -->
+      <div class="flex flex-wrap gap-3 text-sm font-medium">
+         <!-- Tools -->
+     <span data-aos="zoom-in" data-aos-delay="100" class="bg-[#006AB6] text-white px-4 py-2 rounded-full shadow-md">Wireshark</span>
+    <span data-aos="zoom-in" data-aos-delay="150" class="bg-[#1BA0D7] text-white px-4 py-2 rounded-full shadow-md">Cisco Packet Tracer</span>
+    <span data-aos="zoom-in" data-aos-delay="200" class="bg-[#0081C6] text-white px-4 py-2 rounded-full shadow-md">GNS3</span>
+    <span data-aos="zoom-in" data-aos-delay="250" class="bg-[#557C94] text-white px-4 py-2 rounded-full shadow-md">Kali Linux</span>
+    <span data-aos="zoom-in" data-aos-delay="300" class="bg-[#333333] text-white px-4 py-2 rounded-full shadow-md">Metasploit</span>
+    <span data-aos="zoom-in" data-aos-delay="350" class="bg-[#4774B6] text-white px-4 py-2 rounded-full shadow-md">Nmap</span>
+    <span data-aos="zoom-in" data-aos-delay="400" class="bg-[#F47F24] text-white px-4 py-2 rounded-full shadow-md">Burp Suite</span>
+    <span data-aos="zoom-in" data-aos-delay="450" class="bg-[#E32A2A] text-white px-4 py-2 rounded-full shadow-md">Snort</span>
+    <span data-aos="zoom-in" data-aos-delay="500" class="bg-black text-white px-4 py-2 rounded-full shadow-md">Splunk</span>
+
+    <!-- Core Skills -->
+    <span data-aos="zoom-in" data-aos-delay="550" class="bg-[#005B96] text-white px-4 py-2 rounded-full shadow-md">Networking</span>
+    <span data-aos="zoom-in" data-aos-delay="600" class="bg-[#4C4C4C] text-white px-4 py-2 rounded-full shadow-md">TCP/IP</span>
+    <span data-aos="zoom-in" data-aos-delay="650" class="bg-[#F44336] text-white px-4 py-2 rounded-full shadow-md">Firewall</span>
+    <span data-aos="zoom-in" data-aos-delay="700" class="bg-[#2196F3] text-white px-4 py-2 rounded-full shadow-md">VPN</span>
+    <span data-aos="zoom-in" data-aos-delay="750" class="bg-[#9C27B0] text-white px-4 py-2 rounded-full shadow-md">Security</span>
+    <span data-aos="zoom-in" data-aos-delay="800" class="bg-[#607D8B] text-white px-4 py-2 rounded-full shadow-md">Troubleshooting</span>
+
+    <!-- Design & Planning -->
+    <span data-aos="zoom-in" data-aos-delay="850" class="bg-[#3E4EB8] text-white px-4 py-2 rounded-full shadow-md">Network Architecture</span>
+    <span data-aos="zoom-in" data-aos-delay="900" class="bg-[#607D8B] text-white px-4 py-2 rounded-full shadow-md">Subnetting</span>
+    <span data-aos="zoom-in" data-aos-delay="950" class="bg-[#009688] text-white px-4 py-2 rounded-full shadow-md">Access Control</span>
+    <span data-aos="zoom-in" data-aos-delay="1000" class="bg-[#795548] text-white px-4 py-2 rounded-full shadow-md">Incident Response</span>
+  </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- About section ends -->
+
+    <!-- Education section starts -->
+     <section id="education" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+   <h2 class="section-heading" data-aos="fade-up">Education</h2>
+    
+    <div class="space-y-10 relative border-l-4 border-[var(--primary)] pl-6">
+      <!-- MASTERS -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold text-[var(--primary-light)]">M.S in Computer Science</h3>
+        <p class="text-[var(--text-muted)]">Rivier University, Nashua, NH, USA</p>
+        <p class="text-sm text-[var(--text-muted)] italic">2023 – 2025</p>
+      </div>
+
+      <!-- B.TECH -->
+      <div data-aos="fade-right" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-[var(--primary-light)]">B.Tech in Electrical and Electronics Engineering</h3>
+        <p class="text-[var(--text-muted)]">Chebrolu Engineering College, Chebrolu</p>
+        <p class="text-sm text-[var(--text-muted)] italic">2018 - 2022 | Grade: 8.34</p>
+      </div>
+
+      <!-- Intermediate -->
+      <div data-aos="fade-right" data-aos-delay="300">
+        <h3 class="text-xl font-semibold text-[var(--primary-light)]">Intermediate in M.P.C</h3>
+        <p class="text-[var(--text-muted)]">Sri Srinivasa Junior College, Kavali</p>
+        <p class="text-sm text-[var(--text-muted)] italic">2016-2018 | Grade 9.30</p>
+      </div>
+
+      <!-- school -->
+        <div data-aos="fade-right" data-aos-delay="400">
+        <h3 class="text-xl font-semibold text-[var(--primary-light)]">Secondary School Certificate (SSC)</h3>
+        <p class="text-[var(--text-muted)]">Z.P.P High School, Siddanakonduru</p>
+        <p class="text-sm text-[var(--text-muted)] italic">2015-2016 | Grade 9.5</p>
+        <p class="text-sm text-[var(--text-muted)] italic"> <b>Activities and societies:</b> Academic Topper,First Class From School</p>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- Education section ends -->
+
+        <!-- Projects section starts-->
+    <section id="projects" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center">
+   <h2 class="section-heading" data-aos="fade-up">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+     <!-- Project 1 -->
+<div class="bg-[var(--background)] border border-[var(--secondary)] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300" data-aos="fade-right" data-aos-delay="100">
+  <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-2">MSME Railway Project</h3>
+  <p class="text-[var(--text-muted)] mb-4">
+    Led the design and implementation of an automated system to segregate human waste and plastic materials in the railway sector, promoting cleaner environments and efficient waste management.
+  </p>
+  <p class="text-sm text-[var(--text-muted)] mb-4">📍 Andhra Pradesh, India | 🗓️ March 2021</p>
+  <p class="text-sm text-[var(--text-muted)] mb-4">🔧 Technologies Used: Automation Tools, Embedded Systems (details on request)</p>
+  <div class="flex flex-wrap gap-3">
+    <!-- Optional link -->
+    <a href="https://link-to-project.com" target="_blank"
+       class="bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+      View Details
+    </a>
+  </div>
+</div>
+<!-- Project 2 -->
+ <div class="bg-[var(--background)] border border-[var(--secondary)] rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300" data-aos="fade-left" data-aos-delay="100">
+  <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-2">Personal Portfolio Website</h3>
+  <p class="text-[var(--text-muted)] mb-4">
+    A responsive and modern personal portfolio website showcasing projects and skills.
+  </p>
+  <p class="text-sm text-[var(--text-muted)] mb-4">🔧 Technologies Used: HTML, JavaScript, Tailwind CSS</p>
+   <!-- Optional link -->
+    <a href="https://link-to-project.com" target="_blank"
+       class="bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white px-4 py-2 rounded-full text-sm font-semibold transition">
+      View Portfolio
+    </a>
+</div>
+
+</section>
+
+        <!-- project section ends -->
+
+<!-- skills section starts -->
+<section id="skills" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up" data-aos-delay="300">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="section-heading" data-aos="fade-up">Skills</h2>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Technical & Networking Skills with progress bars -->
+      <div>
+        <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-6" data-aos="fade-up" data-aos-delay="100">Technical & Networking Skills</h3>
+        <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex justify-between mb-1 text-sm font-medium text-[var(--text-muted)]">
+              <span>Network Architecture Design</span><span>85%</span>
+            </div>
+            <div class="w-full bg-[var(--secondary)] rounded-full h-2.5">
+              <div class="bg-[var(--primary)] h-2.5 rounded-full w-[85%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1 text-sm font-medium text-[var(--text-muted)]">
+              <span>IP Addressing & Subnetting</span><span>90%</span>
+            </div>
+            <div class="w-full bg-[var(--secondary)] rounded-full h-2.5">
+              <div class="bg-[var(--primary)] h-2.5 rounded-full w-[90%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1 text-sm font-medium text-[var(--text-muted)]">
+              <span>Network Security & Monitoring</span><span>80%</span>
+            </div>
+            <div class="w-full bg-[var(--secondary)] rounded-full h-2.5">
+              <div class="bg-[var(--primary)] h-2.5 rounded-full w-[80%]"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-1 text-sm font-medium text-[var(--text-muted)]">
+              <span>Incident Response & Risk Management</span><span>75%</span>
+            </div>
+            <div class="w-full bg-[var(--secondary)] rounded-full h-2.5">
+              <div class="bg-[var(--primary)] h-2.5 rounded-full w-[75%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools, Design & Certifications -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-[var(--primary-light)] mb-6">Tools & Design Skills</h3>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Wireshark</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Cisco Packet Tracer</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Nmap</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Metasploit</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Kali Linux</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Burp Suite</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Snort</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Splunk</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Wireframing</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Prototyping</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">User Research</span>
+          <span class="bg-[var(--secondary)] text-[var(--background)] px-4 py-1 rounded-full text-sm font-medium">Design Systems</span>
+        </div>
+
+        <!-- Certifications or Notes -->
+        <div class="space-y-4 text-[var(--text-muted)] text-sm">
+          <div class="flex items-start gap-2">
+            <span class="text-[var(--primary-light)] text-lg">🏆</span>
+            <p>Strong foundation in TCP/IP, network protocols, and wireless networking.</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-[var(--primary-light)] text-lg">🎓</span>
+            <p>Experienced in risk assessment, firewall, VPN technologies, and web application security.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- skills section ends -->
+
+<!-- Experience section starts -->
+<section id="experience" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-heading" data-aos="fade-up">Experience </h2>
+
+    <div class="space-y-10 relative border-l-4 border-[var(--primary)] pl-12">
+
+      <!-- Experience: Avineon India Pvt Ltd -->
+      <div class="relative" data-aos="fade-right">
+        <div class="absolute -left-10 top-1">
+          <!-- Replace with your company logo or a related image -->
+          <img src="avineon-logo.png" alt="Avineon India Pvt Ltd" class="w-10 h-10 rounded-full border-2 border-[var(--primary)]" />
+        </div>
+        <div class="group block">
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-semibold text-[var(--primary-light)]">Avineon India Pvt Ltd – Network Engineer</h3>
+            <span class="text-sm text-[var(--text-muted)] italic">Aug 2022 – Jun 2023</span>
+          </div>
+          <p class="text-sm text-[var(--text-muted)] italic mb-2">Network Engineering & Support</p>
+          <ul class="list-disc list-inside text-[var(--text-muted)] space-y-1">
+            <li>Designed and implemented network solutions to improve connectivity and performance across multiple sites.</li>
+            <li>Configured and maintained routers, switches, and firewalls to optimize security and efficiency.</li>
+            <li>Monitored network activity using tools like Wireshark and SolarWinds to troubleshoot and minimize downtime.</li>
+            <li>Provided technical support and training to end-users, enhancing productivity and user experience.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- You can add more experiences here in the same format -->
+
+    </div>
+  </div>
+</section>
+<!-- Experience section ends -->
+
+<!-- hooding-ceremony section starts -->
+<section id="hooding-ceremony" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up" data-aos-delay="100">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-heading mb-12 text-3xl font-bold tracking-wide" data-aos="fade-up" data-aos-delay="150">Master’s Hooding Ceremony</h2>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text content -->
+      <div data-aos="fade-right" data-aos-delay="200" class="space-y-6">
+        <p class="text-[var(--text-muted)] leading-relaxed">
+         An unforgettable milestone! Honored to walk across the stage at River University’s Master’s Hooding Ceremony and officially receive my MS in Computer Science. This achievement is the result of dedication, perseverance, and the unwavering support of my family, friends, and professors. Thank you all for being part of this journey. Excited for what lies ahead!”
+        </p>
+        <p class="text-[var(--text-muted)] leading-relaxed">
+          The ceremonial hood symbolizes mastery in my field and the beginning of a new professional chapter.
+        </p>
+        <p class="text-[var(--primary-light)] font-semibold tracking-wide">
+          Location: <span class="font-normal">
+Rivier University, Nashua, NH, USA</span> | Date: <span class="font-normal">MAY 2025</span>
+        </p>
+      </div>
+
+      <!-- Image gallery -->
+      <div class="grid grid-cols-2 gap-6" data-aos="fade-left" data-aos-delay="250">
+        <img src="hooding1.jpg" alt="Hooding Ceremony Image 1" class="rounded-lg shadow-lg object-cover w-full h-48 transform transition-transform duration-300 hover:scale-105">
+        <img src="hooding2.jpg" alt="Hooding Ceremony Image 2" class="rounded-lg shadow-lg object-cover w-full h-48 transform transition-transform duration-300 hover:scale-105">
+        <img src="hooding3.jpg" alt="Hooding Ceremony Image 3" class="rounded-lg shadow-lg object-cover w-full h-48 transform transition-transform duration-300 hover:scale-105">
+        <img src="hooding4.jpg" alt="Hooding Ceremony Image 4" class="rounded-lg shadow-lg object-cover w-full h-48 transform transition-transform duration-300 hover:scale-105">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- hooding-ceremony section ends -->
+
+<section id="video-section" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up" data-aos-delay="100">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="section-heading mb-8 text-3xl font-bold" data-aos="fade-up" data-aos-delay="150">Honoured</h2>
+    
+    <video 
+      id="myVideo" 
+      class="mx-auto rounded-lg shadow-lg" 
+      controls 
+      preload="metadata"
+      style="max-width:100%; height:auto;"
+      data-aos="zoom-in" 
+      data-aos-delay="200"
+      
+    >
+      <source src="graduation vid.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+<!-- hooding vid ends -->
+
+
+<!-- Contact Section starts -->
+<section id="contact" class="px-6 py-20 bg-[var(--background)] text-[var(--text)]" data-aos="fade-up" data-aos-delay="100">
+  <div class="max-w-4xl mx-auto text-center">
+   <h2 class="section-heading" data-aos="fade-up">Get in touch</h2>
+    <p class="text-[var(--text-muted)] mb-10">
+      Whether you have a question, a project, or just want to say hello — I’d love to connect!
+    </p>
+
+    <!-- Contact Form -->
+      
+   <form id="contactForm"
+      action="https://formsubmit.co/amruthakandula2001@gmail.com"
+      method="POST"
+      class="space-y-6 text-left max-w-xl mx-auto">
+  
+  <!-- Optional hidden settings for FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+  <div>
+    <label for="name" class="block mb-2 text-sm text-[var(--text-muted)]">Your Name</label>
+    <input type="text" id="name" name="name" required
+           class="w-full px-4 py-3 rounded-lg bg-[#0f172a] text-white border border-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+  </div>
+
+  <div>
+    <label for="email" class="block mb-2 text-sm text-[var(--text-muted)]">Email</label>
+    <input type="email" id="email" name="email" required
+           class="w-full px-4 py-3 rounded-lg bg-[#0f172a] text-white border border-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+  </div>
+
+  <div>
+    <label for="message" class="block mb-2 text-sm text-[var(--text-muted)]">Message</label>
+    <textarea id="message" name="message" rows="5" required
+              class="w-full px-4 py-3 rounded-lg bg-[#0f172a] text-white border border-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"></textarea>
+  </div>
+
+  <button type="submit"
+          class="bg-[var(--primary)] hover:bg-[var(--primary-light)] text-white font-semibold py-3 px-6 rounded-full transition duration-300 shadow-md">
+    Send Message
+  </button>
+
+  <!-- Success Message -->
+  <p id="successMsg" class="text-sm text-green-400 mt-4 hidden">✅ Message sent successfully!</p>
+</form>
+
+    
+
+    
+</section>
+
+<!-- Contact Section ends -->
+
+<!-- footer  -->
+<footer class="bg-[var(--background)] text-[var(--text-muted)] py-12 border-t border-[var(--secondary)]">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:justify-between gap-12">
+    <!-- About / Branding -->
+    <div class="md:w-1/3 space-y-4" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-[var(--primary)] font-bold text-xl mb-2">Amrutha Kandula</h3>
+      <p>
+        A passionate Network Engineer and Computer Science graduate based in Rivier University,  Massachusetts.
+      </p>
+      <p>
+        &copy; 2025 Amrutha Kandula | Portfolio. All rights reserved.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="md:w-1/3 space-y-4" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="text-[var(--primary)] font-bold text-xl mb-2">Quick Links</h3>
+      <ul class="space-y-2">
+        <li><a href="#about" class="hover:text-[var(--primary-light)] transition">About Me</a></li>
+        <li><a href="#projects" class="hover:text-[var(--primary-light)] transition">Projects</a></li>
+        <li><a href="#skills" class="hover:text-[var(--primary-light)] transition">Skills</a></li>
+        <li><a href="#education" class="hover:text-[var(--primary-light)] transition">Education</a></li>
+        <li><a href="#experience" class="hover:text-[var(--primary-light)] transition">Experience</a></li>
+        <li> <a href="#hooding-ceremony" class="hover:text-[var(--primary-light)] transition">Hooding</a></li>
+        <li><a href="#contact" class="hover:text-[var(--primary-light)] transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social -->
+    <div class="md:w-1/3 space-y-4" data-aos="fade-up" data-aos-delay="450">
+      <h3 class="text-[var(--primary)] font-bold text-xl mb-2">Contact</h3>
+      <p>📞  +1(978)-427-0626</p>
+      <p>📧 <a href="mailto:amruthakandula2001@gmail.com" class="hover:text-[var(--primary-light)] underline">amruthakandula2001@gmail.com</a></p>
+      <p>📍 Lowell, 
+Massachusetts, USA </p>
+      <div class="flex space-x-6 text-3xl mt-4 text-[var(--text-muted)]">
+        <a href="https://www.linkedin.com/in/amruthakandula/" target="_blank" aria-label="LinkedIn" class="hover:text-[var(--primary-light)] transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0H12v2.6h.1c.6-1.1 2.1-2.6 4.4-2.6 4.7 0 5.6 3.1 5.6 7.1V24h-5V15.3c0-2.1-.04-4.8-2.9-4.8-2.9 0-3.3 2.3-3.3 4.6V24h-5V8z"/></svg>
+        </a>
+        <!-- mail -->
+   <a href="mailto:amruthakandula2001@gmail.com" target="_blank" aria-label="Email" title="Email" class="hover:text-[var(--primary-light)] transform hover:scale-110 hover:-translate-y-1 transition duration-300">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zM4 6h16l-8 5-8-5zm0 12V8l8 5 8-5v10H4z"/>
+  </svg>
+</a>
+<!-- phone -->
+ <a href="tel:+1(978)-427-0626 " target="_blank" aria-label="Phone" title="Call" class="hover:text-[var(--primary-light)] transform hover:scale-110 hover:-translate-y-1 transition duration-300">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.1.34.03.72-.24 1.01l-2.21 2.2z"/>
+  </svg>
+</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  class="fixed bottom-6 right-6 z-50 hidden bg-[var(--primary)] text-white p-3 rounded-full shadow-lg hover:bg-[var(--primary-light)] transition duration-300">
+  <!-- Up Arrow Icon -->
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

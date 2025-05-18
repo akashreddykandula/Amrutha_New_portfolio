@@ -1,7 +1,7 @@
 
  
 // hero section
-const roles = ["Network Engineer", "Cybersecurity Enthusiast", "Graduate Student","CCNA Candidate","Network Security Engineer"];
+const roles = ["Network Engineer","Graduate Student","CCNA Candidate","Network Security Engineer"];
 let typewriter = document.getElementById("typewriter");
 let i = 0, j = 0, isDeleting = false;
 
